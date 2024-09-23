@@ -1,0 +1,237 @@
+.experiences {
+  display: flex;
+  flex-direction: column;
+  margin: 150px;
+  margin-top: 5%;
+}
+
+.header-image {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 450px; /* Ajusta la altura que desees para el contenedor */
+  background: transparent; /* Opcional, para ver el área */
+  margin-top: 100px; /* Aumenta el margen superior para separar del header */
+  margin-bottom: 0px; /* Reduce el margen inferior para acercarlo al section */
+}
+
+.header-image img {
+  max-width: 100%; /* Asegura que la imagen no se desborde en horizontal */
+  max-height: 100%; /* Asegura que la imagen no se desborde en vertical */
+  object-fit: contain; /* Escala la imagen proporcionalmente */
+}
+
+.empty img {
+  height: 150px;
+  margin: 25%;
+}
+
+.empty2 {
+  background-color: white !important;
+}
+
+.experiences-body {
+  background-color: #124f88;
+  color: whitesmoke;
+}
+
+.wave {
+  width: 100%;
+  position: relative;
+  top: 2px;
+}
+
+.wave_bottom {
+  transform: scaleY(-1);
+  top: -2px;
+}
+
+.experiences-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 25px;
+}
+
+.experience-date {
+  font-size: 25px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.experience-company {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.experience-position {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.experience-description {
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.experience {
+  padding: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 950px) {
+  .experiences-title {
+      font-size: 50px;
+      margin: 35px 0;
+  }
+
+  .experience-date {
+      font-size: 30px;
+  }
+
+  .experience-company {
+      font-size: 25px;
+  }
+
+  .experience-position {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+  }
+
+  .experience-description {
+      font-size: 20px;
+      margin-top: 10px;
+      line-height: 1.3;
+  }
+
+  .experience {
+      padding: 0;
+  }
+
+  .experience_left {
+      text-align: right;
+  }
+
+  .experiences-grid {
+      display: grid;
+      grid-template-columns: auto 2px auto;
+      gap: 20px 70px;
+      padding: 70px;
+      justify-content: center;
+      max-width: 980px;
+      margin: 0 auto;
+  }
+
+  .line {
+      background-color: skyblue;
+      position: relative;
+  }
+
+  .line2 {
+      background-color: skyblue;
+      position: relative;
+  }
+
+  .line::before,
+  .line::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: skyblue;
+      border-radius: 50%;
+
+      position: absolute;
+      top: -20px;
+      left: -9px;
+  }
+
+  .line2::before,
+  .line2::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 1px;
+      background-color: skyblue;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 0px;
+      left: 0px;
+  }
+
+  .line::after {
+      top: 100%;
+      z-index: 1;
+  }
+
+  .line2::after {
+      top: 100%;
+      z-index: 1;
+  }
+}
+
+@media (max-width: 950px) {
+  .empty img {
+      display: none;
+  }
+  .experiences {
+      margin: 0;
+  }
+}
+
+/* Estilos del carrusel */
+.carousel {
+  position: relative; /* Asegura que el carrusel pueda usar z-index */
+  width: 100%;
+  max-height: 400px; /* Ajusta la altura según sea necesario */
+  overflow: hidden;
+  z-index: 10; /* Asegura que esté encima del contenido siguiente */
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 20; /* Asegura que los controles estén encima de las imágenes del carrusel */
+}
+
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Ajusta el contenido que sigue al carrusel */
+.section-container {
+  margin-top: 20px; /* Ajusta el margen superior para que el contenido no quede pegado al carrusel */
+  position: relative;
+  z-index: 5; /* Asegura que el contenido esté debajo del carrusel */
+  background-color: white;
+}

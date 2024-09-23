@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Econometric/home</title>
+    <link rel="icon" href="../../Assets/img/logo nuevo.jpg" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../Assets/base/style.css" />
+    <link rel="stylesheet" href="../../Assets/base/heater.css" />
+    <link rel="stylesheet" href="../../Assets/base/footer.css" />
+    <link rel="stylesheet" href="../../Assets//mod/slider.css" />
+    <link rel="stylesheet" href="../../Assets/mod/card.css" />
+    <link rel="stylesheet" href="../../Assets/mod/formulario.css" />
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!--Heater-->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="../../../index.html"
+            ><img
+              src="../../../data/Assets/img/logo nuevo.jpg"
+              alt="Site_LOGO"
+          /></a>
+        </div>
+        <div class="container_nav">
+          <nav id="nav">
+            <ul>
+              <li>
+                <a href="../../../index.html"
+                  ><i class="fa-solid fa-house"></i> <b>Quiénes somos</b></a
+                >
+              </li>
+              <li>
+                <a href="servicios.html"
+                  ><i class="fa-solid fa-briefcase"></i> <b>Qué hacemos</b></a
+                >
+              </li>
+              <li>
+                <a href="cursos.html"
+                  ><i class="fa-solid fa-chalkboard-user"></i> <b>Cursos</b></a
+                >
+              </li>
+              <li>
+                <a href="informes.html" 
+                  ><i class="fa-solid fa-photo-film"></i> <b>En los Medios</b></a
+                >
+              </li>
+              <li>
+                <a href="contacto.html" class="select"
+                  ><i class="fa-solid fa-envelope"></i> <b>Contacto</b></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="btn_menu" id="btn_nav">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <section>
+      <img src="../../Assets/img/slider/imagen(Contacto) .png" alt="" class="picture" >
+      <h2>CONTACTENOS</h2>
+    </section>
+
+    <form
+      action="https://formcarry.com/s/nKc4dt9FXoG"
+      method="POST"
+      enctype="multipart/form-data"
+      class="formulario"
+      id="formulario"
+    >
+      <!-- Grupo: Nombre -->
+      <div class="formulario__grupo" id="grupo__nombre">
+        <label for="nombre" class="formulario__label">Nombre</label>
+        <div class="formulario__grupo-input">
+          <input
+            type="text"
+            class="formulario__input"
+            name="nombre"
+            id="nombre"
+            placeholder="John Doe"
+          />
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          El nombre tiene que ser de 4 a 16 dígitos y solo puede contener
+          numeros, letras y guion bajo.
+        </p>
+      </div>
+
+      <!-- Grupo: Correo Electronico -->
+      <div class="formulario__grupo" id="grupo__correo">
+        <label for="correo" class="formulario__label">Correo Electrónico</label>
+        <div class="formulario__grupo-input">
+          <input
+            type="email"
+            class="formulario__input"
+            name="correo"
+            id="correo"
+            placeholder="correo@correo.com"
+          />
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          El correo solo puede contener letras, numeros, puntos, guiones y guion
+          bajo.
+        </p>
+      </div>
+
+      <!-- Grupo: Teléfono -->
+      <div class="formulario__grupo" id="grupo__telefono">
+        <label for="telefono" class="formulario__label">Teléfono</label>
+        <div class="formulario__grupo-input">
+          <input
+            type="text"
+            class="formulario__input"
+            name="telefono"
+            id="telefono"
+            placeholder="76767676"
+          />
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          El teléfono debe contener de 7 a 14 dígitos.
+        </p>
+      </div>
+
+      <!-- Grupo: Motivo -->
+      <div class="formulario__grupo" id="grupo__motivo">
+        <label for="motivo" class="formulario__label">Motivo</label>
+        <div class="formulario__grupo-input">
+          <input
+            type="text"
+            class="formulario__input"
+            name="motivo"
+            id="motivo"
+            placeholder="Consulta"
+          />
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          El motivo tiene que ser de 4 a 40 dígitos y solo puede contener
+          números, letras y guion bajo.
+        </p>
+      </div>
+
+      <!-- Grupo: Comentario -->
+      <div class="formulario__grupo" id="grupo__comentario">
+        <label for="comentario" class="formulario__label">Comentario</label>
+        <div class="formulario__grupo-input">
+          <textarea
+            type="text"
+            class="formulario__input_text"
+            name="comentario"
+            id="comentario"
+            cols="30"
+            rows="10"
+            placeholder="..."
+            required
+          ></textarea>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+      </div>
+
+      <!-- Grupo: Términos y Condiciones -->
+
+      <div class="formulario__grupo" id="grupo__terminos">
+        <label class="formulario__label">
+          <input
+            class="formulario__checkbox"
+            type="checkbox"
+            name="terminos"
+            id="terminos"
+          />
+          Acepto los Términos y Condiciones
+        </label>
+      </div>
+      <div>
+        <label class="terminoscondiciones">
+          <a href="t&c.html">Leer Términos y Condiciones</a>
+        </label>
+      </div>
+
+      <div class="formulario__mensaje" id="formulario__mensaje">
+        <p>
+          <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
+          rellena el formulario correctamente.
+        </p>
+      </div>
+
+      <div class="formulario__grupo formulario__grupo-btn-enviar">
+        <button type="submit" class="formulario__btn">Enviar</button>
+        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+          <i class="fa-solid fa-circle-check"></i>
+          <b>Formulario enviado exitosamente!</b>
+        </p>
+      </div>
+    </form>
+  <br><br>
+    <footer>
+      <div class="container_footer">
+        <div class="box_footer">
+          <div class="logo">
+            <img src="../../data/Assets/img/logo nuevo.png" alt="" />
+          </div>
+          <div class="terms">
+            <p></p>
+          </div>
+        </div>
+        <div class="box_footer">
+
+
+          <p>
+            La paz-Bolivia <br />
+            <a href="https://maps.app.goo.gl/ogBUg5xa9wUxsrD2A">Calle Montevideo #140 <br />
+            Oficina 702 </a><br>
+          </p>
+        </div>
+        <div class="box_footer">
+
+          <p><a href="servicios.html">Qué hacemos</a> <br>
+          <a href="cursos.html">Cursos</a> <br>
+         <a href="https://api.whatsapp.com/send?phone=70616666&text=Hola%20,te%20asesoramos%20por
+            %20whatsapp">Contacto</a></p>
+        </div>
+        <div class="box_footer">
+
+          <a href="https://www.facebook.com/clases.econometria"> 
+          <!--<i class="fab fa-facebook-square"></i> linkedin</a>-->
+          <!--<a href="#"><i class="fab fa-square-x-twitter"></i> Twitter</a>-->
+          <a href="https://www.linkedin.com/in/antonio-murillo-reyes-94573628/"><i class="fab fa-linkedin"></i> Linkedin</a>
+        </div>
+      </div>
+      <div class="box_copyright">
+        <hr />
+        <p>Todos los derechos reservados © 2024 <b>AC-Shock</b></p>
+      </div>
+    </footer>
+
+
+    <script
+      src="https://kit.fontawesome.com/0414d7c0cb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Scripts-->
+    <script src="../js/nav.js"></script>
+    <script src="../js/formulario.js"></script>
+  </body>
+</html>

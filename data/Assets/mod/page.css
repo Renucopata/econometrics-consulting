@@ -1,0 +1,181 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  font-size: 14px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  background-image: url(../img/banner/banner.jpg);
+  background-position: 50% 70%;
+}
+
+.item {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  background-image: linear-gradient(#a5a5a5cc, #485266fa 85%);
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 410px);
+  top: 0;
+
+}
+
+.item h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+
+.item p {
+  font-size: 16px;
+  margin: 20px;
+  color: black;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#next,
+#prev {
+  position: absolute;
+  top: 40%;
+  color: #817f7f81;
+  background-color: transparent;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 200px;
+  cursor: pointer;
+  z-index: 1;
+}
+#next {
+  left: unset;
+  right: 200px;
+}
+
+#next:hover,
+#prev:hover {
+  color: chocolate;
+}
+
+@media (max-width: 1300px) {
+  .slider {
+    height: 400px;
+  }
+
+  .item {
+    width: 600px;
+    height: 400px;
+    left: calc(50% - 300px);
+  }
+
+  #prev {
+    left: 180px;
+  }
+  #next {
+    right: 230px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider {
+    height: 400px;
+  }
+
+  .item {
+    width: 600px;
+    height: 400px;
+  }
+
+  #prev {
+    left: 100px;
+  }
+  #next {
+    right: 110px;
+  }
+}
+
+@media (max-width: 950px) {
+  .slider {
+    height: 450px;
+  }
+
+  .item {
+    width: 550px;
+    height: 450px;
+    left: calc(50% - 275px);
+  }
+
+  #prev {
+    left: 80px;
+  }
+  #next {
+    right: 90px;
+  }
+}
+
+@media (max-width: 770px) {
+  .slider {
+    height: 550px;
+  }
+
+  .item {
+    width: 450px;
+    height: 550px;
+    left: calc(50% - 225px);
+  }
+
+  #prev {
+    left: 50px;
+  }
+  #next {
+    right: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    height: 600px;
+  }
+
+  .item {
+    width: 400px;
+    height: 600px;
+    left: calc(50% - 200px);
+  }
+
+  #prev {
+    left: 0px;
+  }
+  #next {
+    right: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    height: 620px;
+  }
+
+  .item {
+    width: 350px;
+    height: 620px;
+    left: calc(50% - 175px);
+  }
+
+  #prev {
+    left: 20px;
+  }
+  #next {
+    right: 20px;
+  }
+}

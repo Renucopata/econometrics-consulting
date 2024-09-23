@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Econometric/services</title>
+    <link rel="icon" href="../../Assets/img/logo nuevo.jpg" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../../Assets/base/style.css" />
+    <link rel="stylesheet" href="../../../Assets/base/heater.css" />
+    <link rel="stylesheet" href="../../../Assets/base/footer.css" />
+    <link rel="stylesheet" href="../../../Assets//mod/slider.css" />
+    <link rel="stylesheet" href="../../../Assets/mod/card.css" />
+    <link rel="stylesheet" href="../../../Assets/mod/page.css" />
+    <link rel="stylesheet" href="../../../Assets/mod/modal.css" />
+
+    <link rel="stylesheet" href="1.css" />
+    <style>
+      /* Estilos generales */
+      /* Contenedor padre para añadir perspectiva */
+      .container-3d {
+    perspective: 1000px; /* Define la profundidad del 3D */
+}
+
+/* Sección con transformaciones 3D */
+.section-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se apilen en pantallas pequeñas */
+    width: 80%;
+    margin: auto;
+    background-color: #00518a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 9px; /* Cambiado a px para mayor compatibilidad */
+    transform-style: preserve-3d; /* Asegura que el hijo tenga el efecto 3D */
+    transform: rotateY(15deg) translateZ(30px); /* Efecto 3D de rotación e inclinación */
+    transition: transform 0.5s ease; /* Suaviza la transformación */
+}
+
+/* Efecto hover para incrementar el efecto 3D */
+.section-container:hover {
+    transform: rotateY(25deg) translateZ(40px); /* Aumenta la rotación al pasar el ratón */
+}
+
+.left-column {
+    width: 20%;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.left-column img {
+    display: block;
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+}
+
+.line {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 7px;
+    background-color: skyblue;
+}
+
+.circle {
+    position: absolute; /* Cambiado para facilitar el ajuste en diferentes pantallas */
+    top: 80%;
+    left: 100%; /* Ajusta la posición horizontal */
+    margin-left: -25px; /* Ajusta el margen para centrar el círculo */
+    width: 50px;
+    height: 50px;
+    background-color: skyblue;
+    border-radius: 50%;
+}
+
+.right-column {
+    width: 80%;
+    padding: 20px;
+    background-color: #00518a;
+    color: white;
+}
+
+.experience {
+    margin-bottom: 20px;
+}
+
+.experience h2 {
+    color: wheat;
+}
+
+.experience h1 {
+    margin-top: 50px;
+    color: wheat;
+    font-size: 5vh; /* Tamaño basado en la altura del viewport */
+}
+
+.experience h3 {
+    font-size: 2.5vh; /* Ajusta este tamaño según necesites */
+}
+
+.experience p {
+    font-size: 2.8vh; /* Texto de los párrafos más pequeño */
+}
+
+/* Media queries para pantallas medianas */
+@media (max-width: 1024px) {
+    .section-container {
+        width: 90%;
+    }
+    
+    .left-column {
+        width: 30%; /* Aumenta el tamaño de la columna en pantallas medianas */
+    }
+    
+    .right-column {
+        width: 70%;
+    }
+    
+    .experience h1 {
+        font-size: 4.5vh; /* Disminuye el tamaño del título */
+    }
+    
+    .experience p {
+        font-size: 2.5vh;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        margin-left: -20px; /* Ajusta el margen */
+    }
+}
+
+/* Media queries para pantallas pequeñas (tabletas y móviles) */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column; /* Apila las columnas */
+        width: 100%; /* Se ajusta al 100% del ancho */
+    }
+    
+    .left-column, 
+    .right-column {
+        width: 100%; /* Cada columna ocupa el ancho completo */
+        padding: 10px;
+    }
+    
+    .experience h1 {
+        font-size: 4vh;
+    }
+    
+    .experience p {
+        font-size: 2vh;
+    }
+
+    .circle {
+        width: 35px;
+        height: 35px;
+        margin-left: -15px; /* Ajusta el margen */
+    }
+}
+
+/* Media queries para pantallas extra pequeñas (móviles pequeños) */
+@media (max-width: 480px) {
+    .experience h1 {
+        font-size: 3vh;
+    }
+    
+    .experience p {
+        font-size: 1.8vh;
+    }
+    
+    .left-column img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .line {
+        width: 5px; /* Reduce el grosor de la línea en pantallas pequeñas */
+    }
+    
+    .circle {
+        width: 30px;
+        height: 30px;
+        margin-left: -10px; /* Ajusta el margen para pantallas muy pequeñas */
+    }
+}
+.section-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.columns {
+  display: flex;
+  width: 100%;
+}
+
+
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon-container img {
+  width: 20px; /* Ajusta el tamaño de los iconos */
+  height: auto;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experience {
+  margin-bottom: 20px;
+}
+
+h1, h3 {
+  margin: 0;
+}
+
+
+    </style>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!--Heater-->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="../../../../index.html"
+            ><img src="../../../../data/Assets/img/logo nuevo.jpg" alt="Site_LOGO"
+          /></a>
+        </div>
+        <div class="container_nav">
+          <nav id="nav">
+            <ul>
+              <li>
+                <a href="../../../../index.html"
+                  ><i class="fa-solid fa-house"></i> <b>Quiénes somos</b></a
+                >
+              </li>
+              <li>
+                <a href="../servicios.html" class="select"
+                  ><i class="fa-solid fa-briefcase"></i> <b>Qué hacemos</b></a
+                >
+              </li>
+              <li>
+                <a href="../cursos.html"
+                  ><i class="fa-solid fa-chalkboard-user"></i> <b>Cursos</b></a
+                >
+              </li>
+              <li>
+                <a href="../informes.html"
+                  ><i class="fa-solid fa-photo-film"></i> <b>En los Medios</b></a
+                >
+              </li>
+              <li>
+                <a href="../contacto.html"
+                  ><i class="fa-solid fa-envelope"></i> <b>Contacto</b></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="btn_menu" id="btn_nav">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <br />
+
+
+      <!--<img src="wave.svg" alt="división" class="wave wave_bottom" />-->
+    </section>
+    <section class="section-container" id="experience" style="margin-top: 50px; background-color: white;">
+      <div class="left-column">
+        <img src="../../../Assets/img/icono-1(Pronosticos).png" alt="Icon 1" style="width: 130%; height: auto;">
+        <img src="../../../Assets/img/icono-2(Pronosticos).png" alt="Icon 1" style="width: 130%; height: auto;">
+        <img src="../../../Assets/img/icono-3(Pronosticos).png" alt="Icon 1" style="width: 130%; height: auto;">
+        <img src="../../../Assets/img/icono-4(Pronosticos).png" alt="Icon 1" style="width: 130%; height: auto;">
+        <img src="../../../Assets/img/icono-5(Pronosticos).png" alt="Icon 1" style="width: 130%; height: auto;">
+    </div>
+  
+      <div class="right-column">
+          <div class="experience">
+              <h1>Proyecciones y pronósticos</h1>
+              <h3>Análisis de la coyuntura macroeconómica y perspectiva de mediano plazo de la economía boliviana.</h3>
+          </div>
+          <div class="experience">
+              <h1>Estimación del Índice de Confianza del Consumidor</h1>
+              <h3>Estimación de indicadores relevantes y análisis de confianza del consumidor.</h3>
+          </div>
+          <div class="experience">
+              <h1>Estimación de Indicadores Líderes del Producto Interno Bruto</h1>
+              <h3>Estimación y análisis de indicadores del PIB y sus implicaciones económicas.</h3>
+          </div>
+          <div class="experience">
+              <h1>Estimación de Modelos Macroestructurales para Bolivia</h1>
+              <h3>Desarrollo de modelos macroeconómicos para la economía de Bolivia.</h3>
+          </div>
+          <div class="experience">
+              <h1>Análisis de Sectores Económicos Relevantes</h1>
+              <h3>Análisis y perspectivas de los sectores económicos más importantes.</h3>
+          </div>
+      </div>
+    </section>
+
+    <br />
+    <footer>
+      <div class="container_footer">
+        <div class="box_footer">
+          <div class="logo">
+            <img src="data/Assets/img/econometrics-logo-blanco.png" alt="" />
+          </div>
+          <div class="terms">
+            <p></p>
+          </div>
+        </div>
+        <div class="box_footer">
+
+
+          <p>
+            La Paz-Bolivia <br />
+            <a href="https://maps.app.goo.gl/ogBUg5xa9wUxsrD2A">Calle Montevideo N °140,  <br />
+            Piso 7, Oficina 702</a><br>
+            amurillo@econometrics-consulting.com
+          </p>
+        </div>
+        <div class="box_footer">
+          <p><a href="data/resource/pages/servicios.html">Qué hacemos</a> <br>
+          <a href="data/resource/pages/cursos.html">Cursos</a> <br>
+          <a href="https://api.whatsapp.com/send?phone=70616666&text=Hola%20,te%20asesoramos%20por
+            %20whatsapp">Contacto</a></p>
+        </div>
+        <div class="box_footer">
+          <a href="https://www.facebook.com/clases.econometria"> 
+          <!--<i class="fab fa-facebook-square"></i> linkedin</a>-->
+          <!--<a href="#"><i class="fab fa-square-x-twitter"></i> Twitter</a>-->
+          <a href="https://www.linkedin.com/in/antonio-murillo-reyes-94573628/"><i class="fab fa-linkedin"></i> Linkedin</a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/0414d7c0cb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Scripts-->
+    <script src="../../js/nav.js"></script>
+    <script src="../../js/page.js"></script>
+    <script src="../../js/modal.js"></script>
+  </body>
+</html>

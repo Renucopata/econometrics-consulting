@@ -1,0 +1,16 @@
+{
+    "name": "accordion",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Dcd.html",
+    "scripts": {
+      "start": "parcel Dcd.html --open",
+      "build": "parcel build Dcd.html"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "@babel/core": "7.2.0",
+      "parcel-bundler": "^1.6.1"
+    },
+    "keywords": []
+  }

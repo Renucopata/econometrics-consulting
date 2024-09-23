@@ -1,0 +1,141 @@
+/*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+  }*/
+  
+  .accordion {
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    margin: 10px ;
+    width: 60%;
+    left: 35%;
+  }
+  
+  .accordion-item {
+    margin-bottom: 1px;
+  }
+  
+  .accordion-header {
+    background-color: rgb(223, 127, 59);
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .accordion-content {
+    display: none;
+    max-height: 1000px;
+    transition: max-height 1s ease;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #dddada;
+    color: rgb(0, 0, 0);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: 500;
+  }
+  
+  .accordion-content.active {
+    display: block;
+    max-height: 1000px;
+  }
+  
+  .consulta {
+  position: relative;
+  width: 60%;
+  background: #e0dfdf;
+  height: 480px;
+  line-height: 45px;
+  padding: 0 40px 0 80px;
+  margin: 20px;
+  z-index: 1;
+  top: -200px;
+  border-radius: 5px;
+  border: 1px solid rgb(112, 112, 112);
+  }
+
+  .consultas {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  .card-btn {
+    color: #f5f5f5;
+    background: #b66316;
+    padding: 5px 15px;
+    width: 120px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .descripcion {
+    padding: 30px;
+    position: relative;
+    left: -30%;
+  }
+
+.formulario_curso{
+  width: 90%;
+  background: #fff;
+  border: 1px solid #000000;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16x;
+  margin: 0 2px 10px 0;
+}
+
+.formulario_comentario {
+  width: 90%;
+  border: 1px solid #000000;
+  font-size: 16px;
+  
+}
+
+@media screen and (max-width: 1050px){
+  .consultas {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin: 0 25px;
+    
+      }
+
+      .consulta {
+        position: relative;
+        width: 100%;
+        background: #e0dfdf;
+        height: 450px;
+        line-height: 25px;
+        padding: 20px 40px 0 80px;
+        margin: 10px;
+        z-index: 1;
+        top: auto;
+        border-radius: 5px;
+        border: 1px solid rgb(112, 112, 112);
+        grid-column: 1;
+        }
+        .accordion {
+          justify-content: center;
+          position: relative;
+          align-items: center;
+          margin: 10px ;
+          width: 98%;
+          left: 0;
+          grid-column:1 ;
+        }
+}

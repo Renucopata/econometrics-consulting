@@ -1,0 +1,44 @@
+.modal-container, .modal-container2, .modal-container3, .modal-container4, .modal-container5, .modal-container6 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;  
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .modal, .modal2, .modal3, .modal4, .modal5, .modal6 {
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .modal h1,.modal2 h1, .modal3 h1, .modal4 h1, .modal5 h1, .modal6 h1{
+    text-align: center;
+    margin: 0;
+  }
+  
+  .modal p, .modal2 p, .modal3 p, .modal4 p, .modal5 p, .modal6 p {
+    text-align: justify;
+    opacity: 0.79;
+    font-size: 16px;
+  }
+
+  .fa-solid, .fa-hand-point-right {
+    font-size: 20px;
+  }

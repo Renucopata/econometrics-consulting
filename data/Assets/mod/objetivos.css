@@ -1,0 +1,68 @@
+.objetives{
+    background-color: #96969680;
+    backdrop-filter: blur(15px);
+    margin-bottom: 20px;
+    margin: 20px 13% 20px 13%;
+    background-color: #44464b25;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    
+}
+
+.objetives_container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.objetives_container_left{
+    align-items: center;
+    padding: 50px 100px 100px 200px;
+    justify-content: space-between;
+}
+
+/*.objetives_container_right{
+    background-image: url("../img/face/face-obj.jpg");
+    background-size: cover;
+    background-position: 50% 30%;
+    z-index: 100;
+}*/
+
+.objetives_container_left h2{
+    font-size: 40px;
+    color: #1f2c47;
+}
+
+.objetives_container_left p{
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: justify;
+    color: black;
+}
+
+.objetive_img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+@media screen and (max-width: 678px) {
+    .objetives_container{
+        display: flex;
+    }
+    .objetives_container_left{
+        padding: 50px 20px 50px 20px;
+    }
+    .objetives_container_left h2{
+        font-size: 30px;
+        color: #1f2c47;
+    }
+    
+    .objetives_container_left p{
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: justify;
+        color: black;
+    }
+}

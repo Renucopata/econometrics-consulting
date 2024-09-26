@@ -145,9 +145,15 @@
 
 .card-info {
   font-size: 16px;
-  line-height: 25px;
+  line-height: 20px;
   margin: 0px 0;
   font-weight: 400;
+  list-style-type: disc;
+  list-style-position: outside; /* Ensure the bullet stays outside */
+  padding-left: 30px; /* Adjust padding to control indentation */
+}
+.card-info li {
+  margin-bottom: 15px; /* Adjust this to control space between bullet items */
 }
 
 .card-btn {

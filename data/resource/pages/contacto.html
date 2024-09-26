@@ -77,179 +77,145 @@
         </div>
       </div>
     </header>
+    <img src="../../Assets/img/slider/imagen(Contacto) .png" alt="" class="picture" >
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>CONTÁCTENOS</h2>
+        <p>Háganos llegar su consulta completando el formulario y a la brevedad un representante se pondra en contacto.</p>
+      </div>
+      
     
-    <section>
-      <img src="../../Assets/img/slider/imagen(Contacto) .png" alt="" class="picture" >
-      <h2>CONTACTENOS</h2>
-    </section>
-
-    <form
-      action="https://formcarry.com/s/nKc4dt9FXoG"
-      method="POST"
-      enctype="multipart/form-data"
-      class="formulario"
-      id="formulario"
-    >
-      <!-- Grupo: Nombre -->
-      <div class="formulario__grupo" id="grupo__nombre">
-        <label for="nombre" class="formulario__label">Nombre</label>
-        <div class="formulario__grupo-input">
-          <input
-            type="text"
-            class="formulario__input"
-            name="nombre"
-            id="nombre"
-            placeholder="John Doe"
-          />
-          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      <form action="https://formcarry.com/s/nKc4dt9FXoG" method="POST" enctype="multipart/form-data" class="formulario"
+        id="formulario">
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre">
+          <label for="nombre" class="formulario__label">Nombre</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe" />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El nombre tiene que ser de 4 a 16 dígitos y solo puede contener
+            numeros, letras y guion bajo.
+          </p>
         </div>
-        <p class="formulario__input-error">
-          El nombre tiene que ser de 4 a 16 dígitos y solo puede contener
-          numeros, letras y guion bajo.
-        </p>
-      </div>
-
-      <!-- Grupo: Correo Electronico -->
-      <div class="formulario__grupo" id="grupo__correo">
-        <label for="correo" class="formulario__label">Correo Electrónico</label>
-        <div class="formulario__grupo-input">
-          <input
-            type="email"
-            class="formulario__input"
-            name="correo"
-            id="correo"
-            placeholder="correo@correo.com"
-          />
-          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+    
+        <!-- Grupo: Correo Electronico -->
+        <div class="formulario__grupo" id="grupo__correo">
+          <label for="correo" class="formulario__label">Correo Electrónico</label>
+          <div class="formulario__grupo-input">
+            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com" />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El correo solo puede contener letras, numeros, puntos, guiones y guion
+            bajo.
+          </p>
         </div>
-        <p class="formulario__input-error">
-          El correo solo puede contener letras, numeros, puntos, guiones y guion
-          bajo.
-        </p>
-      </div>
-
-      <!-- Grupo: Teléfono -->
-      <div class="formulario__grupo" id="grupo__telefono">
-        <label for="telefono" class="formulario__label">Teléfono</label>
-        <div class="formulario__grupo-input">
-          <input
-            type="text"
-            class="formulario__input"
-            name="telefono"
-            id="telefono"
-            placeholder="76767676"
-          />
-          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+    
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+          <label for="telefono" class="formulario__label">Teléfono</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="76767676" />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El teléfono debe contener de 7 a 14 dígitos.
+          </p>
         </div>
-        <p class="formulario__input-error">
-          El teléfono debe contener de 7 a 14 dígitos.
-        </p>
-      </div>
-
-      <!-- Grupo: Motivo -->
-      <div class="formulario__grupo" id="grupo__motivo">
-        <label for="motivo" class="formulario__label">Motivo</label>
-        <div class="formulario__grupo-input">
-          <input
-            type="text"
-            class="formulario__input"
-            name="motivo"
-            id="motivo"
-            placeholder="Consulta"
-          />
-          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+    
+        <!-- Grupo: Motivo -->
+        <div class="formulario__grupo" id="grupo__motivo">
+          <label for="motivo" class="formulario__label">Motivo</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="motivo" id="motivo" placeholder="Consulta" />
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">
+            El motivo tiene que ser de 4 a 40 dígitos y solo puede contener
+            números, letras y guion bajo.
+          </p>
         </div>
-        <p class="formulario__input-error">
-          El motivo tiene que ser de 4 a 40 dígitos y solo puede contener
-          números, letras y guion bajo.
-        </p>
-      </div>
-
-      <!-- Grupo: Comentario -->
-      <div class="formulario__grupo" id="grupo__comentario">
-        <label for="comentario" class="formulario__label">Comentario</label>
-        <div class="formulario__grupo-input">
-          <textarea
-            type="text"
-            class="formulario__input_text"
-            name="comentario"
-            id="comentario"
-            cols="30"
-            rows="10"
-            placeholder="..."
-            required
-          ></textarea>
-          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+    
+        <!-- Grupo: Comentario -->
+        <div class="formulario__grupo" id="grupo__comentario">
+          <label for="comentario" class="formulario__label">Mensaje</label>
+          <div class="formulario__grupo-input">
+            <textarea type="text" class="formulario__input_text" name="comentario" id="comentario" cols="30" rows="10"
+              placeholder="..." required></textarea>
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
         </div>
-      </div>
-
-      <!-- Grupo: Términos y Condiciones -->
-
-      <div class="formulario__grupo" id="grupo__terminos">
-        <label class="formulario__label">
-          <input
-            class="formulario__checkbox"
-            type="checkbox"
-            name="terminos"
-            id="terminos"
-          />
-          Acepto los Términos y Condiciones
-        </label>
-      </div>
-      <div>
-        <label class="terminoscondiciones">
-          <a href="t&c.html">Leer Términos y Condiciones</a>
-        </label>
-      </div>
-
-      <div class="formulario__mensaje" id="formulario__mensaje">
-        <p>
-          <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
-          rellena el formulario correctamente.
-        </p>
-      </div>
-
-      <div class="formulario__grupo formulario__grupo-btn-enviar">
-        <button type="submit" class="formulario__btn">Enviar</button>
-        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
-          <i class="fa-solid fa-circle-check"></i>
-          <b>Formulario enviado exitosamente!</b>
-        </p>
-      </div>
-    </form>
+    
+        <!-- Grupo: Términos y Condiciones -->
+    
+      
+    
+        <div class="formulario__mensaje" id="formulario__mensaje">
+          <p>
+            <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
+            rellena el formulario correctamente.
+          </p>
+        </div>
+    
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button type="submit" class="formulario__btn">Enviar</button>
+          <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+            <i class="fa-solid fa-circle-check"></i>
+            <b>Formulario enviado exitosamente!</b>
+          </p>
+        </div>
+      </form>
+    </div>
   <br><br>
+
+  <div class="map-section-container">
+  <div class="map-section-info">
+    <h2>¿Dónde estamos?</h2>
+    <p>Encuéntranos en nuestra sede principal ubicada en el centro de la ciudad de La Paz, en la Calle Montevideo #140 Edificio Jorge Zambrana Oficina 702. Haga clic en el mapa para obtener direcciones.</p>
+  </div>
+
+  <div class="map-section-map">
+    <a href="https://maps.app.goo.gl/ogBUg5xa9wUxsrD2A" target="_blank">
+      <img src="../../../data/Assets/img/mapaContacto.png" alt="Mapa de Ubicación" class="map-image" />
+    </a>
+  </div>
+
+</div>
+
     <footer>
       <div class="container_footer">
         <div class="box_footer">
           <div class="logo">
-            <img src="../../data/Assets/img/logo nuevo.png" alt="" />
+            <img src="data/Assets/img/econometrics logo 01 copy.png" alt="" />
           </div>
           <div class="terms">
             <p></p>
           </div>
         </div>
+
         <div class="box_footer">
-
-
           <p>
-            La paz-Bolivia <br />
+            La Paz-Bolivia <br />
             <a href="https://maps.app.goo.gl/ogBUg5xa9wUxsrD2A">Calle Montevideo #140 <br />
             Oficina 702 </a><br>
+            Celular +591 76595263
           </p>
         </div>
         <div class="box_footer">
 
           <p><a href="servicios.html">Qué hacemos</a> <br>
           <a href="cursos.html">Cursos</a> <br>
-         <a href="https://api.whatsapp.com/send?phone=70616666&text=Hola%20,te%20asesoramos%20por
-            %20whatsapp">Contacto</a></p>
+         <a href="https://api.whatsapp.com/send?phone=76595263&text=Hola%20,te%20asesoramos%20por
+            %20whatsapp" target="_blank">Contacto</a></p>
         </div>
         <div class="box_footer">
 
-          <a href="https://www.facebook.com/clases.econometria"> 
-          <!--<i class="fab fa-facebook-square"></i> linkedin</a>-->
-          <!--<a href="#"><i class="fab fa-square-x-twitter"></i> Twitter</a>-->
-          <a href="https://www.linkedin.com/in/antonio-murillo-reyes-94573628/"><i class="fab fa-linkedin"></i> Linkedin</a>
+          <a href="https://www.facebook.com/clases.econometria" target="_blank"> 
+
+          <a href="https://www.linkedin.com/company/econometrics-consulting/about/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
         </div>
       </div>
       <div class="box_copyright">

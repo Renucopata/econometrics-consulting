@@ -23,12 +23,8 @@ section h2 {
   background: transparent; /* Fondo completamente transparente */
 }
 
-
-
-
-
 .formulario {
-  padding-top: 100px;
+ 
   display: grid;
   grid-template-columns: 1fr;
   margin: 0 100px;
@@ -47,7 +43,8 @@ section h2 {
 }
 
 .formulario__input {
-  width: 40%;
+  width: 100%;
+  margin-bottom: 20px;
   background: #fff;
   border: 1px solid black;
   border-radius: 5px;
@@ -61,7 +58,7 @@ section h2 {
   background: #fff;
   border: 1px solid black;
   border-radius: 5px;
-  height: 250px;
+  height: 100px;
   line-height: 45px;
   padding: 0 40px 0 10px;
   transition: 0.3s ease all;

@@ -17,25 +17,18 @@
 
 .objetives_container_left{
     align-items: center;
-    padding: 50px 100px 100px 200px;
-    justify-content: space-between;
+    padding: 50px 100px;
+
 }
 
-/*.objetives_container_right{
-    background-image: url("../img/face/face-obj.jpg");
-    background-size: cover;
-    background-position: 50% 30%;
-    z-index: 100;
-}*/
-
 .objetives_container_left h2{
-    font-size: 40px;
+    font-size: 30px;
     color: #1f2c47;
 }
 
 .objetives_container_left p{
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: justify;
     color: black;
 }

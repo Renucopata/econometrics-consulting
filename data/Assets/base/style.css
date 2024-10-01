@@ -6,7 +6,9 @@
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
+
 
 body {
   background: whitesmoke;
@@ -116,3 +118,13 @@ padding: 50px;
 .map-section-info p {
   font-size: 1.1rem; /* Adjust text size */
 }
+.down h2:hover {
+  color: white;
+}
+
+/* Adjust the scroll speed using CSS (no need for extra JS) */
+.down h2:hover {
+  scroll-behavior: smooth;
+}
+
+

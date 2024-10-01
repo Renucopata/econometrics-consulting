@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Econometric/services</title>
-    <link rel="icon" href="../../../Assets/img/eLogo.png"/>
+    <title>Econometrics Consulting</title>
+    <link rel="icon" href="../../../Assets/img/ecologo1.png"/>
 
     <!--CSS-->
     <link rel="stylesheet" href="../../../Assets/base/style.css" />
@@ -296,15 +296,33 @@ h1, h3 {
       </div>
     </header>
     <br />
+
+    <section class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img src="../../../Assets/img/aseso1.jpg" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../Assets/img/aseso2.jpg" alt="Imagen 3">
+        </div>
+        <!-- Añade más imágenes aquí si es necesario -->
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-control" id="prev">&lt;</button>
+        <button class="carousel-control" id="next">&gt;</button>
+      </div>
+    </section>
+
+
     <section class="section-container" id="experience" style="margin-top: 20px; background-color: white;">
       <div class="left-column">
-        <img src="../../../Assets/img/icono-0(Proyectos).png" alt="Icon 1" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-2(Pronosticos).png" alt="Icon 1" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-6(ciencias-aplicadas) (1).png" alt="Icon 1" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-1(Proyectos).png" alt="Icon 1" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-2(Proyectos).png" alt="Icon 1" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-5(ciencias-aplicadas) (1).png" alt="Icon 1" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-3(Macroeconomia).png" alt="Icon 1" style="width: 100%; height: auto;">      
+        <img src="../../../Assets/img/asesoramiento1.png" alt="Icon 1" style="width: 80%; height: auto;">
+        <img src="../../../Assets/img/asesor2.png" alt="Icon 1" style="width: 80%; height: auto;">
+        <img src="../../../Assets/img/herra1.png" alt="Icon 1" style="width: 90%; height: auto;">
+        <img src="../../../Assets/img/aeso3.png" alt="Icon 1" style="width: 87%; height: auto;">
+        <img src="../../../Assets/img/aseso4.png" alt="Icon 1" style="width: 87%; height: auto;">
+        <img src="../../../Assets/img/estudios1.png" alt="Icon 1" style="width: 80%; height: auto;">
+        <img src="../../../Assets/img/asesp5.png" alt="Icon 1" style="width: 85%; height: auto;">      
     </div>
   
       <div class="right-column">
@@ -391,6 +409,36 @@ h1, h3 {
       src="https://kit.fontawesome.com/0414d7c0cb.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const carouselInner = document.querySelector('.carousel-inner');
+      const prevButton = document.getElementById('prev');
+      const nextButton = document.getElementById('next');
+      let index = 0;
+  
+      function showSlide(n) {
+        const slides = document.querySelectorAll('.carousel-item');
+        if (n >= slides.length) index = 0;
+        if (n < 0) index = slides.length - 1;
+        carouselInner.style.transform = `translateX(-${index * 100}%)`;
+      }
+  
+      prevButton.addEventListener('click', () => {
+        index--;
+        showSlide(index);
+      });
+  
+      nextButton.addEventListener('click', () => {
+        index++;
+        showSlide(index);
+      });
+  
+      // Auto slide
+      setInterval(() => {
+        index++;
+        showSlide(index);
+      }, 3000); // Cambia de imagen cada 5 segundos
+    </script>
 
     <!--Scripts-->
     <script src="../../js/nav.js"></script>

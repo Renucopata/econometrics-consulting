@@ -11,9 +11,10 @@
 }
 .picture3 {
   width: 100%;
-    height: 700px;
-    object-fit: cover;
+  height: auto; /* Automatically adjusts height based on the width */
+  max-height: 550px; /* Limits the height to 700px */
 }
+
 section h2 {
   position: absolute;
   top: 500px; /* Ajusta este valor para mover el texto hacia abajo */

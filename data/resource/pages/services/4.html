@@ -278,13 +278,78 @@
 }
 .middle-image {
   position: absolute;
-  top: 50%; /* Adjusts the vertical position */
+  top: 800px; /* Adjusts the vertical position */
   left: 30%; /* Positions image in the center of the two columns */
   transform: translate(-50%, -50%); /* Ensures the image is centered exactly */
   width: 60px; /* Adjust image size */
   height: auto;
   z-index: 1; /* Ensures the image overlaps */
+  margin-top: 370px;
 }
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Adjust the size of the dots */
+.dot {
+  width: 55px;
+  height: 55px;
+  background-color: #555555;
+  border-radius: 50%;
+  position: relative;
+}
+
+.dot::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Start line at the middle of the dot */
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #555555;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Custom line heights */
+.short-line .dot::after {
+  height: 380%;
+}
+
+.medium-line .dot::after {
+  height: 300%;
+}
+
+.long-line .dot::after {
+  height: 730%;
+}
+
+.timeline-item:last-child .dot::after {
+  display: none; /* Hide the line after the last dot */
+}
+
+/* Custom spacing between each dot */
+.custom-spacing-1 {
+  margin-bottom: 230px; /* Custom space between first and second dot */
+}
+
+.custom-spacing-2 {
+  margin-bottom: 120px; /* Custom space between second and third dot */
+}
+
+.custom-spacing-3 {
+  margin-bottom: 80px; /* Custom space after third dot */
+}
+
 
 
     </style>
@@ -376,7 +441,7 @@
   <div class="content-wrapper">
     <div class="image-column">
       <img src="../../../Assets/img/icono-1(ciencias-aplicadas) (3).png" alt="Icon 1" style="width: 40%; height: auto; margin-top: 200px;">
-        <hr style="border: none; margin: 85px 0;">
+        <hr style="border: none; margin: 75px 0;">
         <img src="../../../Assets/img/cerebro1-removebg.png" alt="Icon 1" style="width: 150% ; height: auto">
         <hr style="border: none; margin: 60px 0;">
         <img src="../../../Assets/img/pag1.png" alt="Icon 1" style="width: 25%; height: auto;">
@@ -471,11 +536,45 @@
           <li>Extracción de información relevante de internet mediante web scraping: precios de todo tipo de artículos de tiendas y supermercados, información y cotización de activos financieros, etc.</li>
         </ul>
     </div>
-    <img src="" alt="Middle Image" class="middle-image">
-  </div>
-  
-  
+    <div class="middle-image">
+      <div class="timeline-container">
 
+        <div class="timeline-item long-line custom-spacing-1">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item long-line custom-spacing-1">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item short-line custom-spacing-3">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item long-line custom-spacing-1">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item long-line custom-spacing-3">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item long-line custom-spacing-3">
+        </div>
+        <div class="timeline-item long-line custom-spacing-2">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item long-line custom-spacing-2">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item short-line custom-spacing-2">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item short-line custom-spacing-2">
+          <div class="dot"></div>
+        </div>
+        <div class="timeline-item"></div>
+          <div class="dot"></div>
+        </div>  
+      </div>
+    </div>
+    
+  </div>
   
 
     <br />

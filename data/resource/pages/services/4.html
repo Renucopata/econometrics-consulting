@@ -240,24 +240,25 @@
 .image-column img {
   max-width: 50%; /* Adjusts image size to fit the column */
   height: auto; /* Maintains the aspect ratio */
+  position: relative;
 }
 
 .text-column {
   width: 70%;
   background-color: #96969680;
-  padding: 20px; /* Adjusts space inside the right column */
+  margin-left: 0;
 }
 
 .text-column h1 {
   font-size: 3.5vh; /* Adjust font size */
   color: #b66316ec; /* Adjust font color */
   line-height: 1.5; /* Adjust space between lines */
-  margin: 10px 20px; /* Left and right margin */
+  margin: 10px 10px; /* Left and right margin */
 }
 
 .text-column ul {
   list-style-type: square; /* Change bullets to squares */
-  margin-left: 30px;
+  margin-left: 70px;
   padding-left: 0;
 }
 
@@ -269,35 +270,21 @@
   text-align: justify;
 }
 .custom-title {
-  font-size: 8vh; /* You can adjust the size as needed */
+  font-size: 7vh; /* You can adjust the size as needed */
   font-weight: bold;
   color: #b66316ec;
   text-align: right;
   margin-top: 60px;
-  margin-bottom: 80px;
-}
-.middle-image {
-  position: absolute;
-  top: 800px; /* Adjusts the vertical position */
-  left: 30%; /* Positions image in the center of the two columns */
-  transform: translate(-50%, -50%); /* Ensures the image is centered exactly */
-  width: 60px; /* Adjust image size */
-  height: auto;
-  z-index: 1; /* Ensures the image overlaps */
-  margin-top: 370px;
+  margin-bottom: 100px;
 }
 
-.timeline-container {
+
+.dot-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: start;
+  margin-bottom: 20px; /* Adjust space between sections */
 }
 
-.timeline-item {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
 
 /* Adjust the size of the dots */
 .dot {
@@ -306,50 +293,32 @@
   background-color: #555555;
   border-radius: 50%;
   position: relative;
+  margin-left: -19px;
 }
-
+.last-dot {
+  width: 55px;
+  height: 55px;
+  background-color: #555555;
+  border-radius: 50%;
+  position: relative;
+  margin-left: -19px;
+}
 .dot::after {
   content: '';
   position: absolute;
   top: 50%; /* Start line at the middle of the dot */
   left: 50%;
-  width: 4px;
-  height: 100%;
+  width: 6px;
+  height: 300px;
   background-color: #555555;
   transform: translateX(-50%);
   z-index: -1;
 }
 
-/* Custom line heights */
-.short-line .dot::after {
-  height: 380%;
-}
 
-.medium-line .dot::after {
-  height: 300%;
-}
-
-.long-line .dot::after {
-  height: 730%;
-}
-
-.timeline-item:last-child .dot::after {
+.dot-container:last-child .dot::after {
   display: none; /* Hide the line after the last dot */
 }
-
-/* Custom spacing between each dot */
-.custom-spacing-1 {
-  margin-bottom: 230px; /* Custom space between first and second dot */
-}
-
-.custom-spacing-2 {
-  margin-bottom: 120px; /* Custom space between second and third dot */
-}
-
-.custom-spacing-3 {
-  margin-bottom: 80px; /* Custom space after third dot */
-}
-
 
 
     </style>
@@ -440,30 +409,24 @@
 
   <div class="content-wrapper">
     <div class="image-column">
-      <img src="../../../Assets/img/icono-1(ciencias-aplicadas) (3).png" alt="Icon 1" style="width: 40%; height: auto; margin-top: 200px;">
-        <hr style="border: none; margin: 75px 0;">
-        <img src="../../../Assets/img/cerebro1-removebg.png" alt="Icon 1" style="width: 150% ; height: auto">
-        <hr style="border: none; margin: 60px 0;">
-        <img src="../../../Assets/img/pag1.png" alt="Icon 1" style="width: 25%; height: auto;">
-        <hr style="border: none; margin: 50px 0;">
-        <img src="../../../Assets/img/detec.png" alt="Icon 1" style="width: 30%; height: auto;">
-        <hr style="border: none; margin: 70px 0;">
-        <img src="../../../Assets/img/cred.png" alt="Icon 1" style="width: 30%; height: auto;">
-        <hr style="border: none; margin: 50px 0;">
-        <img src="../../../Assets/img/icono-4(ciencias-aplicadas) (1).png" alt="Icon 1" style="width: 32%; height: auto;">
-        <hr style="border: none; margin: 33px 0;">
-        <img src="../../../Assets/img/chat.png" alt="Icon 1" style="width: 25%; height: auto;">
-        <hr style="border: none; margin: 30px 0;">
-        <img src="../../../Assets/img/bd.png" alt="Icon 1" style="width: 25%; height: auto;">
-        <hr style="border: none; margin: 50px 0;">
-        <img src="../../../Assets/img/herra1.png" alt="Icon 1" style="width: 30%; height: auto;">
-        <hr style="border: none; margin: 35px 0;">
-        <img src="../../../Assets/img/scraping1.png" alt="Icon 1" style="width: 30% ; height: auto">
+      <img src="../../../Assets/img/icono-1(ciencias-aplicadas) (3).png" alt="Icon 1" style="width: 40%; height: auto; margin-bottom: 170px; ">
+      <img src="../../../Assets/img/cerebro1-removebg.png" alt="Icon 1" style="width: 150%; height: auto; margin-bottom: 150px;">
+      <img src="../../../Assets/img/pag1.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 100px;">
+      <img src="../../../Assets/img/detec.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 180px;">
+      <img src="../../../Assets/img/cred.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 120px;">
+      <img src="../../../Assets/img/icono-4(ciencias-aplicadas) (1).png" alt="Icon 1" style="width: 32%; height: auto; margin-bottom: 60px;">
+      <img src="../../../Assets/img/chat.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 90px;">
+      <img src="../../../Assets/img/bd.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 80px;">
+      <img src="../../../Assets/img/herra1.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 80px;">
+      <img src="../../../Assets/img/scraping1.png" alt="Icon 1" style="width: 30%; height: auto;">
+      
     </div>
     <div class="text-column">
       <h2 class="custom-title">Ciencia de Datos</h2>
-
-      <h1 style="margin-top: 20px;">Detección de anomalías en empresas petroleras y similares.</h1>
+      <div class="dot-container">
+        <div class="dot"></div>
+        <h1>Detección de anomalías en empresas petroleras y similares.</h1>
+      </div>
         <ul>
           <li>Aplicación de modelos de Machine Learning y Deep Learning para detectar anomalías y posibles fallos de funcionamiento de pipelines e instalaciones vinculadas a la producción y extracción de hidrocarburos. También aplicable a pipelines de empresas transportadoras de agua.</li>
           <li>Aplicación de modelos estadísticos para la detección de fraudes en facturación en empresas.</li>
@@ -471,22 +434,33 @@
         <div class="down"><a href="#section-2"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
 
         <!-- Section 2 -->
-        <h1 id="section-2">Forecast de demanda y cálculos de elasticidad para empresas de retail (comercio minorista).</h1>
+        <div class="dot-container">
+          <div class="dot"></div>
+          <h1 id="section-2">Forecast de demanda y cálculos de elasticidad para empresas <br> de retail (comercio minorista).</h1>
+        </div>
         <ul>
-          <li>Aplicación de modelos de Machine Learning y Deep Learning para el pronóstico a corto y largo plazo de la evolución de ventas de una empresa de comercio minorista.</li>
-          <li>Aplicación de modelos estadísticos para el cálculo de elasticidad de demanda de productos, para dar base cuantitativa a estrategias de pricing.</li>
+          <li>Aplicación de modelos de Machine Learning y Deep Learning para el pronóstico a corto y largo plazo de la evolución
+            de ventas de una empresa de comercio minorista.</li>
+          <li>Aplicación de modelos estadísticos para el cálculo de elasticidad de demanda de productos, para dar base
+            cuantitativa a estrategias de pricing.</li>
         </ul>
         <div class="down"><a href="#section-3"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 3 -->
+        <div class="dot-container">
+        <div class="dot"></div>
         <h1 id="section-3">Sistemas de recomendación para empresas de retail.</h1>
+        </div>
         <ul>
           <li>Aplicación de sistemas de recomendación en las páginas web de empresas de retail y marketplaces para ofrecer sugerencias a clientes y visitantes del sitio.</li>
         </ul>
         <div class="down"><a href="#section-4"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 4 -->
+        <div class="dot-container">
+        <div class="dot"></div>
         <h1 id="section-4">Modelos de detección de fraude para empresas y sector público.</h1>
+        </div>
         <ul>
           <li>Algoritmos de Deep Learning orientados a la detección de fraude, vinculado con operaciones crediticias (tarjetas de débito y crédito).</li>
           <li>Modelos no supervisados de clustering para la identificación de tipos de fraude en el sector de seguros.</li>
@@ -495,7 +469,10 @@
         <div class="down"><a href="#section-5"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 5 -->
+        <div class="dot-container">
+          <div class="dot"></div>
         <h1 id="section-5">Modelos de Credit Scoring para empresas del sector financiero.</h1>
+        </div>
         <ul>
           <li>Variedad de algoritmos de credit scoring para determinar la calidad crediticia de prestatarios en el sector financiero.</li>
           <li>Modelos de clasificación para predecir el potencial default (incumplimiento) de deudores del sistema financiero.</li>
@@ -503,76 +480,55 @@
         <div class="down"><a href="#section-6"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 6 -->
+        <div class="dot-container">
+          <div class="dot"></div>
         <h1 id="section-6">Algoritmos de clusterización para segmentación de clientes.</h1>
+        </div>
         <ul>
           <li>Aplicación de modelos no supervisados de clustering para la segmentación y agrupamiento de clientes, tanto en empresas financieras como no financieras.</li>
         </ul>
         <div class="down"><a href="#section-7"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 7 -->
+        <div class="dot-container">
+          <div class="dot"></div>
         <h1 id="section-7">Chatbots orientados a la atención al cliente.</h1>
+        </div>
         <ul>
           <li>Elaboración e implementación de chatbots mediante técnicas de Procesamiento de Lenguaje Natural (NLP) para facilitar y automatizar la atención al cliente.</li>
         </ul>
         <div class="down"><a href="#section-8"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 8 -->
+        <div class="dot-container">
+          <div class="dot"></div>
         <h1 id="section-8">Soluciones RAG para empresas.</h1>
+        </div>
         <ul>
           <li>Implementación de soluciones RAG para interactuar con bases de datos y documentos no estructurados, para obtener respuestas precisas en lenguaje natural orientados a la optimización de procesos y toma decisiones.</li>
         </ul>
         <div class="down"><a href="#section-9"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 9 -->
+        <div class="dot-container">
+          <div class="dot"></div>
         <h1 id="section-9">Dashboards para visualización de procesos.</h1>
+        </div>
         <ul>
           <li>Creación de dashboards y tableros para una adecuada visualización de procesos y registro de actividades dentro de una empresa.</li>
         </ul>
         <div class="down"><a href="#section-10"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 10 -->
+        <div class="dot-container">
+          <div class="last-dot"></div>
         <h1 id="section-10">Scraping de datos e información en la web.</h1>
+        </div>
         <ul>
           <li>Extracción de información relevante de internet mediante web scraping: precios de todo tipo de artículos de tiendas y supermercados, información y cotización de activos financieros, etc.</li>
         </ul>
     </div>
-    <div class="middle-image">
-      <div class="timeline-container">
-
-        <div class="timeline-item long-line custom-spacing-1">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item long-line custom-spacing-1">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item short-line custom-spacing-3">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item long-line custom-spacing-1">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item long-line custom-spacing-3">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item long-line custom-spacing-3">
-        </div>
-        <div class="timeline-item long-line custom-spacing-2">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item long-line custom-spacing-2">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item short-line custom-spacing-2">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item short-line custom-spacing-2">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-item"></div>
-          <div class="dot"></div>
-        </div>  
-      </div>
-    </div>
+    
     
   </div>
   

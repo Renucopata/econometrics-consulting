@@ -226,21 +226,24 @@
   margin: 0 auto;
   display: flex;
   position: relative;
+  transform: scale(1); /* Prevent responsiveness by scaling the entire content */
+  transform-origin: 0 0; /* Fixes the origin point for scaling */
 }
 
 .image-column {
   width: 30%;
   background-color: white;
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  flex-direction: column; /* Aligns multiple images in a column */
+  justify-content: flex-end; /* Aligns images to the right */
+  align-items: center;
+  flex-direction: column;
 }
 
 .image-column img {
-  max-width: 50%; /* Adjusts image size to fit the column */
-  height: auto; /* Maintains the aspect ratio */
-  position: relative;
+  width: 100%; /* Ensures images fill the column */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Keeps images within bounds without stretching */
+  max-height: 100%; /* Prevents overexpansion of images */
 }
 
 .text-column {
@@ -276,6 +279,7 @@
   text-align: right;
   margin-top: 60px;
   margin-bottom: 100px;
+  margin-right: 10px;
 }
 
 
@@ -294,6 +298,7 @@
   border-radius: 50%;
   position: relative;
   margin-left: -19px;
+  flex-shrink: 0;
 }
 .last-dot {
   width: 55px;
@@ -309,15 +314,22 @@
   top: 50%; /* Start line at the middle of the dot */
   left: 50%;
   width: 6px;
-  height: 300px;
+  height: 350px;
   background-color: #555555;
-  transform: translateX(-50%);
   z-index: -1;
 }
 
+@media (max-width: 1200px) {
+  .image-column, 
+  .dot-container .dot,
+  .last-dot {
+    display: none;
+  }
 
-.dot-container:last-child .dot::after {
-  display: none; /* Hide the line after the last dot */
+  /* Adjust text-column width to take up full space */
+  .text-column {
+    width: 90%;
+  }
 }
 
 
@@ -410,7 +422,7 @@
   <div class="content-wrapper">
     <div class="image-column">
       <img src="../../../Assets/img/icono-1(ciencias-aplicadas) (3).png" alt="Icon 1" style="width: 40%; height: auto; margin-bottom: 170px; ">
-      <img src="../../../Assets/img/cerebro1-removebg.png" alt="Icon 1" style="width: 150%; height: auto; margin-bottom: 150px;">
+      <img src="../../../Assets/img/cerebro1-removebg.png" alt="Icon 1" style="width: 55%; height: auto; margin-bottom: 150px;">
       <img src="../../../Assets/img/pag1.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 100px;">
       <img src="../../../Assets/img/detec.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 180px;">
       <img src="../../../Assets/img/cred.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 120px;">
@@ -419,113 +431,122 @@
       <img src="../../../Assets/img/bd.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 80px;">
       <img src="../../../Assets/img/herra1.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 80px;">
       <img src="../../../Assets/img/scraping1.png" alt="Icon 1" style="width: 30%; height: auto;">
-      
     </div>
+
+
+
     <div class="text-column">
       <h2 class="custom-title">Ciencia de Datos</h2>
       <div class="dot-container">
         <div class="dot"></div>
-        <h1>Detección de anomalías en empresas petroleras y similares.</h1>
+        <h1>Modelos de detección de anomalías y fraude en operaciones crediticias</h1>
       </div>
         <ul>
-          <li>Aplicación de modelos de Machine Learning y Deep Learning para detectar anomalías y posibles fallos de funcionamiento de pipelines e instalaciones vinculadas a la producción y extracción de hidrocarburos. También aplicable a pipelines de empresas transportadoras de agua.</li>
-          <li>Aplicación de modelos estadísticos para la detección de fraudes en facturación en empresas.</li>
+          <li>Aplicación de algoritmos supervisados y no supervisados de Machine Learning (ML) y Deep Learning (DL) para detectar anomalías y posible fraude en transacciones vinculadas con operaciones de tarjeta de crédito y débito.</li>
+          <li>Desarrollo de modelos de clasificación y detección de patrones inusuales que permiten identificar actividades sospechosas en tiempo real.</li>
         </ul>
         <div class="down"><a href="#section-2"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
 
         <!-- Section 2 -->
         <div class="dot-container">
           <div class="dot"></div>
-          <h1 id="section-2">Forecast de demanda y cálculos de elasticidad para empresas <br> de retail (comercio minorista).</h1>
+          <h1 id="section-2">Modelos de prevención de fraude para empresas aseguradoras</h1>
         </div>
         <ul>
-          <li>Aplicación de modelos de Machine Learning y Deep Learning para el pronóstico a corto y largo plazo de la evolución
-            de ventas de una empresa de comercio minorista.</li>
-          <li>Aplicación de modelos estadísticos para el cálculo de elasticidad de demanda de productos, para dar base
-            cuantitativa a estrategias de pricing.</li>
+          <li>Aplicación de algoritmos supervisados y no supervisados de Machine Learning (ML) y Deep Learning (DL) para detectar posible fraude en demandas de indemnización.</li>
+          <li>Implementación de modelos predictivos para identificar patrones sospechosos en los reclamos, utilizando técnicas como el análisis de redes neuronales, árboles de decisión, random forests y clustering.</li>
         </ul>
         <div class="down"><a href="#section-3"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 3 -->
         <div class="dot-container">
         <div class="dot"></div>
-        <h1 id="section-3">Sistemas de recomendación para empresas de retail.</h1>
+        <h1 id="section-3">Modelos de customer churn para empresas financieras, comerciales y aseguradoras</h1>
         </div>
         <ul>
-          <li>Aplicación de sistemas de recomendación en las páginas web de empresas de retail y marketplaces para ofrecer sugerencias a clientes y visitantes del sitio.</li>
+          <li>Aplicación de algoritmos de Machine Learning (ML) para predecir la rotación de clientes (customer churn) en empresas del sector comercial, financiero y asegurador.</li>
+          <li>Identificación de patrones de comportamiento que anticipan la desvinculación de clientes, utilizando modelos predictivos como regresión logística, árboles de decisión y redes neuronales.</li>
+          <li>Segmentación de clientes con mayor probabilidad de abandono para la implementación de estrategias de retención personalizadas.</li>
         </ul>
         <div class="down"><a href="#section-4"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 4 -->
         <div class="dot-container">
         <div class="dot"></div>
-        <h1 id="section-4">Modelos de detección de fraude para empresas y sector público.</h1>
+        <h1 id="section-4">Soluciones RAG para empresas</h1>
         </div>
         <ul>
-          <li>Algoritmos de Deep Learning orientados a la detección de fraude, vinculado con operaciones crediticias (tarjetas de débito y crédito).</li>
-          <li>Modelos no supervisados de clustering para la identificación de tipos de fraude en el sector de seguros.</li>
-          <li>Modelos de Deep Learning aplicados a la detección de fraude impositivo en el sector público.</li>
+          <li>Implementación de soluciones RAG (Retrieval-Augmented Generation) para interactuar con bases de datos y documentos no estructurados en empresas financieras y aseguradoras.</li>
+          <li>Utilización de modelos de procesamiento de lenguaje natural (NLP) para obtener respuestas precisas y contextualizadas, mejorando la eficiencia en la búsqueda y el análisis de información clave.</li>         
         </ul>
         <div class="down"><a href="#section-5"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 5 -->
         <div class="dot-container">
           <div class="dot"></div>
-        <h1 id="section-5">Modelos de Credit Scoring para empresas del sector financiero.</h1>
+        <h1 id="section-5">Dashboards para visualización de procesos</h1>
         </div>
         <ul>
-          <li>Variedad de algoritmos de credit scoring para determinar la calidad crediticia de prestatarios en el sector financiero.</li>
-          <li>Modelos de clasificación para predecir el potencial default (incumplimiento) de deudores del sistema financiero.</li>
+          <li>Creación de dashboards y tableros interactivos para una visualización clara y eficiente de procesos y registro de actividades en empresas financieras y aseguradoras.</li>
+          <li>Integración de métricas clave y KPIs en tiempo real, permitiendo a los usuarios monitorear el rendimiento y la eficiencia operativa de manera rápida y precisa.</li>
+          <li>Personalización de los tableros según las necesidades específicas del negocio, facilitando la identificación de áreas de mejora y la toma de decisiones informadas.</li>
         </ul>
         <div class="down"><a href="#section-6"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 6 -->
         <div class="dot-container">
           <div class="dot"></div>
-        <h1 id="section-6">Algoritmos de clusterización para segmentación de clientes.</h1>
+        <h1 id="section-6">Scraping de datos e información en la web</h1>
         </div>
         <ul>
-          <li>Aplicación de modelos no supervisados de clustering para la segmentación y agrupamiento de clientes, tanto en empresas financieras como no financieras.</li>
+          <li>Extracción de información relevante de internet mediante técnicas de web scraping, enfocadas en precios de alimentos, bebidas, activos financieros, cotizaciones de mercado, pólizas de seguro, entre otros.</li>
+          <li>Automatización del proceso de recopilación de datos desde múltiples fuentes en línea, permitiendo la obtención de información actualizada en tiempo real.</li>
         </ul>
         <div class="down"><a href="#section-7"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 7 -->
         <div class="dot-container">
           <div class="dot"></div>
-        <h1 id="section-7">Chatbots orientados a la atención al cliente.</h1>
+        <h1 id="section-7">Chatbots orientados a la atención al cliente</h1>
         </div>
         <ul>
           <li>Elaboración e implementación de chatbots mediante técnicas de Procesamiento de Lenguaje Natural (NLP) para facilitar y automatizar la atención al cliente.</li>
+          <li>Desarrollo de chatbots capaces de gestionar consultas frecuentes, proporcionando respuestas rápidas y precisas para mejorar la experiencia del usuario.</li>
+          <li>Automatización de la interacción con clientes, optimizando los tiempos de respuesta y reduciendo la necesidad de intervención humana en procesos rutinarios.</li>
         </ul>
         <div class="down"><a href="#section-8"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 8 -->
         <div class="dot-container">
           <div class="dot"></div>
-        <h1 id="section-8">Soluciones RAG para empresas.</h1>
+        <h1 id="section-8">Algoritmos de clusterización para segmentación de clientes</h1>
         </div>
         <ul>
-          <li>Implementación de soluciones RAG para interactuar con bases de datos y documentos no estructurados, para obtener respuestas precisas en lenguaje natural orientados a la optimización de procesos y toma decisiones.</li>
+          <li>Aplicación de algoritmos de clustering no supervisados para segmentar y agrupar clientes, con el objetivo de identificar patrones de comportamiento y optimizar estrategias comerciales. maximizando el valor de vida del cliente (Customer Lifetime Value, CLV).</li>
+          <li>Optimización de campañas de marketing y estrategias de fidelización mediante la agrupación eficiente de clientes en segmentos que comparten comportamientos similares, lo que aumenta la tasa de retención y la satisfacción del cliente.</li>
         </ul>
         <div class="down"><a href="#section-9"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 9 -->
         <div class="dot-container">
           <div class="dot"></div>
-        <h1 id="section-9">Dashboards para visualización de procesos.</h1>
+        <h1 id="section-9">Modelos de Credit Scoring para empresas del sector financiero</h1>
         </div>
         <ul>
-          <li>Creación de dashboards y tableros para una adecuada visualización de procesos y registro de actividades dentro de una empresa.</li>
+          <li>Mejora de la gestión del portafolio de créditos, permitiendo a la empresa seleccionar a los clientes adecuados y diversificar el riesgo. Una cartera de clientes diversificada entre diferentes niveles de riesgo reduce las probabilidades de pérdidas significativas por impagos.</li>
+          <li>Automatización de decisiones. Evaluación oportuna y eficiente para aprobar o rechazar solicitudes de crédito.</li>
+          <li>Optimización de la cartera de clientes. El credit scoring ayuda a mejorar la gestión del portafolio de créditos, permitiendo a la empresa seleccionar a los clientes adecuados y diversificar el riesgo.</li>
         </ul>
         <div class="down"><a href="#section-10"><h2><i class="fa-solid fa-angles-down"></i></h2></a></div>
     
         <!-- Section 10 -->
         <div class="dot-container">
           <div class="last-dot"></div>
-        <h1 id="section-10">Scraping de datos e información en la web.</h1>
+        <h1 id="section-10">Sistemas de recomendación para empresas de retail</h1>
         </div>
         <ul>
-          <li>Extracción de información relevante de internet mediante web scraping: precios de todo tipo de artículos de tiendas y supermercados, información y cotización de activos financieros, etc.</li>
+          <li>Incremento en ventas y conversiones. Sugerencia de productos relevantes basados en el comportamiento previo de los usuarios para aumentar la probabilidad de compras adicionales.</li>
+          <li>Personalización de la experiencia del cliente. Personalización de la experiencia de compra al sugerir productos que coinciden con las preferencias, intereses y comportamientos previos de los clientes.</li>
         </ul>
     </div>
     

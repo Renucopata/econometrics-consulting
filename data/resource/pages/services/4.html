@@ -295,7 +295,7 @@
   top: 50%; /* Start line at the middle of the dot */
   left: 50%;
   width: 6px;
-  height: 375px;
+  height: 55vh;
   background-color: #555555;
   z-index: -1;
 }
@@ -330,6 +330,19 @@
   height: 8%; /* Makes the line span the entire height of the column */
   background-color: #555555;
   border-radius: 10px;
+}
+
+@media (min-height: 820px) {
+  .dot::after {
+    height: 65vh; /* Adjust line height for larger screens */
+  }
+}
+
+/* For extra-large screens, even more space */
+@media (min-height: 1000px) {
+  .dot::after {
+    height: 70vh; /* Further increase line height */
+  }
 }
 
 
@@ -422,7 +435,7 @@
   <div class="content-wrapper">
     <div class="image-column">
       <div class="rounded-vertical-line"></div>
-      <img src="../../../Assets/img/icono-1(ciencias-aplicadas) (3).png" alt="Icon 1" style="width: 40%; height: auto; margin-bottom: 150px; margin-top: 200px; margin-right: 60px;">
+      <img src="../../../Assets/img/icono-1(ciencias-aplicadas) (3).png" alt="Icon 1" style="width: 40%; height: auto; margin-bottom: 150px; margin-top: 200px; margin-right: 50px;">
       <img src="../../../Assets/img/cerebro1-removebg.png" alt="Icon 1" style="width: 55%; height: auto; margin-bottom: 150px; margin-right: 25px;">
       <img src="../../../Assets/img/pag1.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 200px;">
       <img src="../../../Assets/img/detec.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 180px;">

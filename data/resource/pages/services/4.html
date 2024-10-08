@@ -15,143 +15,7 @@
     <link rel="stylesheet" href="../../../Assets/mod/page.css" />
     <link rel="stylesheet" href="../../../Assets/mod/modal.css" />
     <style>
-      /* Estilos generales */
-      /* Contenedor padre para añadir perspectiva */
-     
 
-
-      .left-column {
-          width: 20%;
-          background-color: white;
-          padding: 35px;
-          position: relative;
-      }
-
-      .left-column img {
-          display: block;
-          margin:  auto;
-          margin-bottom: 80px;
-          width: 50px;
-          height: 50px;
-      }
-
-      .line {
-          position: absolute;
-          left: 100%;
-          top: 0;
-          bottom: 0;
-          width: 7px;
-          background-color: skyblue;
-      }
-
-      .circle {
-          top: 80%;
-          margin-left: 188px;
-          width: 50px;
-          height: 50px;
-          background-color: skyblue;
-          border-radius: 50%;
-      }
-
-      .right-column {
-          width: 80%;
-          padding: 20px;
-          background-color: #96969680;
-          color: black;
-      }
-
-      .experience {
-          margin-bottom: 20px;
-      }
-
-      .experience h2 {
-          color: #b66316ec;
-      }
-
-      .experience h1 {
-          margin-top: 50px;
-          color: #b66316ec;
-          font-size: 4vh; /* Tamaño basado en la altura del viewport */
-      }
-
-      .experience h3 {
-          font-size: 2.5vh; /* Ajusta este tamaño según necesites */
-      }
-
-      .experience p {
-          font-size: 2.8vh; /* Texto de los párrafos más pequeño */
-      }
-
-      /* Media queries para pantallas medianas */
-      @media (max-width: 1024px) {
-          .section-container {
-              width: 90%;
-          }
-          
-          .left-column {
-              width: 30%; /* Aumenta el tamaño de la columna en pantallas medianas */
-          }
-          
-          .right-column {
-              width: 70%;
-          }
-          
-          .experience h1 {
-              font-size: 4.5vh; /* Disminuye el tamaño del título */
-          }
-          
-          .experience p {
-              font-size: 2.5vh;
-          }
-      }
-
-      /* Media queries para pantallas pequeñas (tabletas y móviles) */
-      @media (max-width: 768px) {
-          .section-container {
-              flex-direction: column; /* Apila las columnas */
-              width: 100%; /* Se ajusta al 100% del ancho */
-          }
-          
-          .left-column, 
-          .right-column {
-              width: 100%; /* Cada columna ocupa el ancho completo */
-              padding: 10px;
-          }
-          
-          .experience h1 {
-              font-size: 4vh;
-          }
-          
-          .experience p {
-              font-size: 2vh;
-          }
-      }
-
-      /* Media queries para pantallas extra pequeñas (móviles pequeños) */
-      @media (max-width: 480px) {
-          .experience h1 {
-              font-size: 3vh;
-          }
-          
-          .experience p {
-              font-size: 1.8vh;
-          }
-          
-          .left-column img {
-              width: 40px;
-              height: 40px;
-          }
-          
-          .line {
-              width: 5px; /* Reduce el grosor de la línea en pantallas pequeñas */
-          }
-          
-          .circle {
-              width: 40px;
-              height: 40px;
-              margin-left: 140px;
-          }
-      }
       .carousel {
       position: relative;
       width: 70%;
@@ -226,6 +90,12 @@
   margin-right: 85px; /* Prevents overexpansion of images */
   margin-bottom: 30px;
   
+}
+
+@media (min-height: 780px) {
+  .image-column {
+    gap: 90px; /* Adjust line height for larger screens */
+  }
 }
 
 .text-column {
@@ -337,6 +207,8 @@
     height: 65vh; /* Adjust line height for larger screens */
   }
 }
+
+
 
 /* For extra-large screens, even more space */
 @media (min-height: 1000px) {

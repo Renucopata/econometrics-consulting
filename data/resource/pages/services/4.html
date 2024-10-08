@@ -198,7 +198,7 @@
         width: 100%;
       }
     }
-    .content-wrapper {
+.content-wrapper {
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -211,16 +211,21 @@
   width: 30%;
   background-color: white;
   display: flex;
-  justify-content: flex-end; /* Aligns images to the right */
-  align-items: center;
+  justify-content: flex-start; /* Aligns images to the right */
+  align-items: flex-end;
   flex-direction: column;
+   
 }
 
 .image-column img {
   width: 100%; /* Ensures images fill the column */
+  top: 0;
   height: auto; /* Maintains aspect ratio */
   object-fit: contain; /* Keeps images within bounds without stretching */
-  max-height: 100%; /* Prevents overexpansion of images */
+  max-height: 100%;
+  margin-right: 85px; /* Prevents overexpansion of images */
+  margin-bottom: 30px;
+  
 }
 
 .text-column {
@@ -267,7 +272,6 @@
 }
 
 
-/* Adjust the size of the dots */
 .dot {
   width: 55px;
   height: 55px;
@@ -291,7 +295,7 @@
   top: 50%; /* Start line at the middle of the dot */
   left: 50%;
   width: 6px;
-  height: 380px;
+  height: 375px;
   background-color: #555555;
   z-index: -1;
 }
@@ -307,6 +311,25 @@
   .text-column {
     width: 90%;
   }
+}
+
+.rounded-vertical-line {
+  position: absolute; /* Allows absolute positioning */
+  top: 0; /* Starts from the top */
+  left: 6%; /* Adjust this to position the line horizontally */
+  width: 40px;
+  height: 15%; /* Makes the line span the entire height of the column */
+  background-color: #555555;
+  border-radius: 10px;
+}
+.rounded-vertical-line-bottom {
+  position: absolute; /* Allows absolute positioning */
+  bottom: 0; /* Starts from the top */
+  left: 6%; /* Adjust this to position the line horizontally */
+  width: 40px;
+  height: 8%; /* Makes the line span the entire height of the column */
+  background-color: #555555;
+  border-radius: 10px;
 }
 
 
@@ -398,16 +421,18 @@
 
   <div class="content-wrapper">
     <div class="image-column">
-      <img src="../../../Assets/img/icono-1(ciencias-aplicadas) (3).png" alt="Icon 1" style="width: 40%; height: auto; margin-bottom: 170px; ">
-      <img src="../../../Assets/img/cerebro1-removebg.png" alt="Icon 1" style="width: 55%; height: auto; margin-bottom: 150px;">
-      <img src="../../../Assets/img/pag1.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 100px;">
+      <div class="rounded-vertical-line"></div>
+      <img src="../../../Assets/img/icono-1(ciencias-aplicadas) (3).png" alt="Icon 1" style="width: 40%; height: auto; margin-bottom: 150px; margin-top: 200px; margin-right: 60px;">
+      <img src="../../../Assets/img/cerebro1-removebg.png" alt="Icon 1" style="width: 55%; height: auto; margin-bottom: 150px; margin-right: 25px;">
+      <img src="../../../Assets/img/pag1.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 200px;">
       <img src="../../../Assets/img/detec.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 180px;">
-      <img src="../../../Assets/img/cred.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 120px;">
-      <img src="../../../Assets/img/icono-4(ciencias-aplicadas) (1).png" alt="Icon 1" style="width: 32%; height: auto; margin-bottom: 60px;">
-      <img src="../../../Assets/img/chat.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 90px;">
-      <img src="../../../Assets/img/bd.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 80px;">
-      <img src="../../../Assets/img/herra1.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 80px;">
+      <img src="../../../Assets/img/cred.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 160px;">
+      <img src="../../../Assets/img/icono-4(ciencias-aplicadas) (1).png" alt="Icon 1" style="width: 32%; height: auto; margin-bottom: 170px;">
+      <img src="../../../Assets/img/chat.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 210px;">
+      <img src="../../../Assets/img/bd.png" alt="Icon 1" style="width: 25%; height: auto; margin-bottom: 230px;">
+      <img src="../../../Assets/img/herra1.png" alt="Icon 1" style="width: 30%; height: auto; margin-bottom: 210px;">
       <img src="../../../Assets/img/scraping1.png" alt="Icon 1" style="width: 30%; height: auto;">
+      <div class="rounded-vertical-line-bottom"></div>
     </div>
 
 

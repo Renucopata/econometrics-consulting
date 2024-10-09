@@ -18,208 +18,107 @@
 
 
     <style>
-      /* Estilos generales */
-      /* Contenedor padre para añadir perspectiva */
-      .container-3d {
-          perspective: 1000px; /* Define la profundidad del 3D */
-      }
-
-      /* Sección con transformaciones 3D */
-      .section-container {
-
-          display: flex;
-          flex-wrap: wrap;
-          width: 80%;
-          margin: auto;
-          background-color: white;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          border-radius: 9em;
-          transform-style: preserve-3d; /* Asegura que el hijo tenga el efecto 3D */
-          transform: rotateY(15deg) translateZ(30px); /* Efecto 3D de rotación e inclinación */
-          transition: transform 0.5s ease; /* Suaviza la transformación */
-      }
-
-      /* Efecto hover para incrementar el efecto 3D */
-      .section-container:hover {
-          transform: rotateY(25deg) translateZ(40px); /* Aumenta la rotación al pasar el ratón */
-      }
 
 
-      .left-column {
-          width: 20%;
-          background-color: white;
-          padding: 20px;
-          position: relative;
-      }
-
-      .left-column img {
-          display: block;
-          margin: 20px auto;
-          width: 50px;
-          height: 50px;
-      }
-
-      .line {
-          position: absolute;
-          left: 100%;
-          top: 0;
-          bottom: 0;
-          width: 7px;
-          background-color: skyblue;
-      }
-
-      .circle {
-          top: 80%;
-          margin-left: 188px;
-          width: 50px;
-          height: 50px;
-          background-color: skyblue;
-          border-radius: 50%;
-      }
-
-      .right-column {
-      width: 80%; /* Make it wider to fill more space */
-      background-color: #96969680;
-      color: black;
+  .content-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  transform: scale(1); /* Prevent responsiveness by scaling the entire content */
+  transform-origin: 0 0; /* Fixes the origin point for scaling */
 }
 
-.experience {
-  margin-bottom: 20px;
+.image-column {
+  width: 30%;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start; /* Aligns images to the right */
+  align-items: center;
+  flex-direction: column;
+   
+}
+
+.image-column img {
+  width: 30%; /* Ensures images fill the column */
+  top: 0;
+  height: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Keeps images within bounds without stretching */
+  max-height: 100%;
+  margin-left: 27px; /* Prevents overexpansion of images */
+
   
 }
 
-      .experience h2 {
-          color: #b66316ec;
-      }
 
-      .experience h1 {
-          margin-top: 50px;
-          color: #b66316ec;
-          font-size: 4.8vh;
-          max-width: fit-content; /* Tamaño basado en la altura del viewport */
-      }
-
-      .experience h3 {
-          font-size: 2.5vh; /* Ajusta este tamaño según necesites */
-      }
-
-      .experience p {
-          font-size: 2.8vh; /* Texto de los párrafos más pequeño */
-      }
-
-      /* Media queries para pantallas medianas */
-      @media (max-width: 1024px) {
-          .section-container {
-              width: 90%;
-          }
-          
-          .left-column {
-              width: 30%; /* Aumenta el tamaño de la columna en pantallas medianas */
-          }
-          
-          .right-column {
-              width: 70%;
-          }
-          
-          .experience h1 {
-              font-size: 4.5vh; /* Disminuye el tamaño del título */
-          }
-          
-          .experience p {
-              font-size: 2.5vh;
-          }
-      }
-
-      /* Media queries para pantallas pequeñas (tabletas y móviles) */
-      @media (max-width: 768px) {
-          .section-container {
-              flex-direction: column; /* Apila las columnas */
-              width: 100%; /* Se ajusta al 100% del ancho */
-          }
-          
-          .left-column, 
-          .right-column {
-              width: 100%; /* Cada columna ocupa el ancho completo */
-              padding: 10px;
-          }
-          
-          .experience h1 {
-              font-size: 4vh;
-          }
-          
-          .experience p {
-              font-size: 2vh;
-          }
-      }
-      .section-container {
-  display: flex;
-  justify-content: space-between;
+.text-column {
+  width: 70%;
+  background-color: #96969680;
+  margin-left: 0;
 }
 
-.columns {
-  display: flex;
-  width: 100%;
+@media (max-width: 1200px) {
+  .image-column {
+    display: none;
+    
+  }
+  .text-column {
+    width: 90%;
+    margin-left: 50px;
+  }
+}
+.text-column h1 {
+  font-size: 3.5vh; /* Adjust font size */
+  color: #b66316ec; /* Adjust font color */
+  line-height: 1.5; /* Adjust space between lines */
+  margin: 10px 10px; /* Left and right margin */
 }
 
-
-
-.left-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.text-column ul {
+  list-style-type: square; /* Change bullets to squares */
+  margin-left: 70px;
+  padding-left: 0;
 }
 
-.icon-container {
-  display: flex;
-  justify-content: center;
+.text-column li {
+  font-size: 2.5vh; /* Adjust font size for list items */
+  color: black; /* Adjust font color */
+  line-height: 1.5; /* Adjust space between lines */
+  margin: 5px 25px; /* Left and right margin for list items */
+  text-align: justify;
   margin-bottom: 20px;
 }
-
-.icon-container img {
-  width: 20px; /* Ajusta el tamaño de los iconos */
-  height: auto;
+.custom-title {
+  font-size: 7vh; /* You can adjust the size as needed */
+  font-weight: bold;
+  color: #b66316ec;
+  text-align: right;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  margin-right: 30px;
+  margin-left: 50px;
 }
 
-.right-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.rounded-vertical-line {
+  position: absolute; /* Allows absolute positioning */
+  top: 0; /* Starts from the top */
+  left: 6%; /* Adjust this to position the line horizontally */
+  width: 40px;
+  height: 25%; /* Makes the line span the entire height of the column */
+  background-color: #555555;
+  border-radius: 10px;
+}
+.rounded-vertical-line-bottom {
+  position: absolute; /* Allows absolute positioning */
+  bottom: 0; /* Starts from the top */
+  left: 6%; /* Adjust this to position the line horizontally */
+  width: 40px;
+  height: 15%; /* Makes the line span the entire height of the column */
+  background-color: #555555;
+  border-radius: 10px;
 }
 
-.experience {
-  margin-bottom: 20px;
-}
-
-h1, h3 {
-  margin: 0;
-}
-
-      /* Media queries para pantallas extra pequeñas (móviles pequeños) */
-      @media (max-width: 480px) {
-          .experience h1 {
-              font-size: 3vh;
-          }
-          
-          .experience p {
-              font-size: 1.8vh;
-          }
-          
-          .left-column img {
-              width: 40px;
-              height: 40px;
-          }
-          
-          .line {
-              width: 5px; /* Reduce el grosor de la línea en pantallas pequeñas */
-          }
-          
-          .circle {
-              width: 40px;
-              height: 40px;
-              margin-left: 140px;
-          }
-      }
-      
+ 
 
     </style>
 
@@ -281,23 +180,21 @@ h1, h3 {
           <button class="carousel-control" id="next">&gt;</button>
         </div>
       </section>
-    
-  
-    <!-- Contenido siguiente al carrusel -->
-    <section class="section-container" id="experience">
-      <div class="left-column">
-        <img src="../../../Assets/img/icono-1(Macroeconomia).png" alt="Icon 1" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-2(Macrroeconomia).png" alt="Icon 2" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-3(Macroeconomia).png" alt="Icon 3" style="width: 100%; height: auto;">
-        <img src="../../../Assets/img/icono-4(Macroeconomia).png" alt="Icon 4" style="width: 100%; height: auto;">
 
-      </div>
-  
-      <div class="right-column">
-        <div class="experience">
-          <h1>Análisis Macroeconómico y Sectorial</h1>
-          <br><br><br>
-          <ul class="custom-bullets">
+      <div class="content-wrapper">
+        <div class="image-column">
+        <div class="rounded-vertical-line"></div>
+
+        <img src="../../../Assets/img/icono-1(Macroeconomia).png" alt="Icon 1" style="margin-top: 200px;">
+        <img src="../../../Assets/img/icono-2(Macrroeconomia).png" alt="Icon 2" >
+        <img src="../../../Assets/img/icono-3(Macroeconomia).png" alt="Icon 3" >
+        <img src="../../../Assets/img/icono-4(Macroeconomia).png" alt="Icon 4">
+        <div class="rounded-vertical-line-bottom"></div>
+
+        </div>
+        <div class="text-column">
+          <h2 class="custom-title">Análisis Macroeconómico y Sectorial</h2>
+          <ul>
             <li>Análisis de la coyuntura macroeconómica y perspectiva de mediano plazo de la economía boliviana.</li>
             <li>Análisis de la evolución y perspectivas de la coyuntura económica internacional y proyecciones de los
               escenarios más probables a corto y mediano plazo para la economía boliviana.</li>
@@ -306,10 +203,11 @@ h1, h3 {
             <li>Estimación de modelos Macroestructurales para la economía de Bolivia</li>
             <li>Análisis de la evolución y perspectivas de los sectores económicos más relevantes</li>
           </ul>
+
+
         </div>
-        </section>
-  
-    <br />
+      </div>
+
     <footer>
       <div class="container_footer">
         <div class="box_footer">

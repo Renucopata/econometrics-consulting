@@ -16,9 +16,10 @@ footer {
   .container_footer {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin-left: 90px;
+    margin-left: 50px;
     margin-top: 10px;
+ 
+
   }
   
   .box_footer {
@@ -29,7 +30,7 @@ footer {
   }
   
   .box_footer .logo img {
-    width: 300px;
+    width: 270px;
     margin-left: 0;
   }
   
@@ -57,14 +58,7 @@ footer {
     font-size: 20px;
   }
   
-  .box_footer a .fa-facebook-square:hover {
-    color: rgb(8, 102, 255);
-  }
-  
-  .box_footer a .fa-square-x-twitter:hover {
-    color: rgb(0, 0, 0);
-  }
-  
+
   .box_footer a .fa-linkedin:hover {
     color: rgb(10, 102, 194);
   }

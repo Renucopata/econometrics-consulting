@@ -16,30 +16,24 @@ footer {
   .container_footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     max-width: 1200px;
-    margin: auto;
+    margin-left: 90px;
     margin-top: 10px;
   }
   
   .box_footer {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    margin-right: 30px;
+
   }
   
   .box_footer .logo img {
     width: 300px;
+    margin-left: 0;
   }
   
-  .box_footer .terms {
-    max-width: 350px;
-    margin-top: 20px;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    
-  }
+
   
   .box_footer h2 {
     margin-bottom: 30px;
@@ -75,25 +69,7 @@ footer {
     color: rgb(10, 102, 194);
   }
   
-  .box_copyright {
-    max-width: calc(100vh-12px);
-    margin: auto;
-    text-align: center;
-    padding: 0px 40px;
-  }
-  
-  .box_copyright p {
-    margin-top: 10px;
-    color: antiquewhite;
-    opacity: 0.4;
-  }
-  
-  .box_copyright hr {
-    border: none;
-    height: 1px;
-    background-color: antiquewhite;
-    opacity: 0.4;
-  }
+
 
   @media screen and (max-width: 678px) {
     .container_footer {

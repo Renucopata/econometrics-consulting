@@ -1,121 +1,77 @@
-.testimony{
-    margin: 20px 13% 50px 13%;
+
+.team_container {
+    display: flex;
+    width: 75%;
+    margin: 30px auto;
     background-color: #44464b25;
-    padding: 50px;
-    font-weight: 500;
-    font-size: 18px;
-    
-}
 
-.testimony p {
+  }
+  
+  .image-column {
+    width: 30%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+  }
+  
+  .image-column img {
+    width: 80%;
+    height: auto;
+  }
+
+  .text-column {
+    width: 70%;
+    padding-left: 20px;
+    position: relative;
     text-align: justify;
-}
-
-.testimony h3 {
-    text-align:end;
-    font-size: 25px;
-}
-
-.testimony a .fa-linkedin:hover {
-    color: rgb(10, 102, 194);
-}
-
-.testimony__container{
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    gap: 1em;
-    align-items: center;
-    
-}
-
-.testimony__body{
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    opacity: 0;
-    pointer-events: none;
-}
-
-
-.testimony__body--show{
-    pointer-events: unset;
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.testimony__img{
-    width: 250px;
-    height: 250px;
-    border-radius: 0%;
-    object-fit: cover;
-    object-position: 50% 30%;
-}
-
-.testimony_texts{
-    max-width: 600px;
-}
-
-.testimony__course{
-    background-color: transparent;
+  }
+  
+  .text-column h1 {
+    font-size: 2em;
+    color: black;
+  }
+  
+  .text-column h2 {
+    font-size: 1.5em;
     color: rgb(191, 112, 55);
-    display: inline-block;
-    padding: 5px;
-}
-
-.testimony__arrow{
-    width: 100%;
-    cursor: pointer;
-}
-
-@media (max-width:800px){
-    .testimony{
-        font-size: 16px;
-        margin: 20px 5px 50px 5px;
-    }
-
-    .testimony__container{
-        grid-template-columns: 30px 1fr 30px;
-    }
-
-    .testimony__body{
-        grid-template-columns: 1fr;
-        grid-template-rows: max-content max-content;
-        gap: 3em;
-        justify-items:center ;
-    }
-
-
-    .testimony__img{
-        width: 200px;
-        height: 200px;
-        
-    }
-}
-
-@media (max-width:600px){
-    .testimony{
-        --padding-container: 60px 0;
-        
-        padding: 2%;
-    }
-
+  }
+  
+  .text-column p, .text-column div {
     
+    font-size: 1em;
+    line-height: 1.6;
+    color: black;
+    font-weight: 500;
+    margin: 15px 22px 20px 0;
+    
+  }
+  
+  .text-column a {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 25px;
 
-    .testimony__container{
-        grid-template-columns: 28px 1fr 28px;
-        gap: .9em;
+  }
+
+  .text-column a:hover{
+    color: blue;
+  }
+
+  @media (max-width: 1000px) {
+    .team_container {
+      flex-direction: column; /* Stacks the image and text columns */
     }
-
-    .testimony__arrow{
-        width: 100%;
+  
+    .image-column, .text-column {
+      width: 100%; /* Makes both columns take full width */
+      padding: 10px;
     }
-
-    .testimony__course{
-        margin-top: 15px;
-    }
-
-}
+    .image-column img {
+        width: 60%; 
+      }
+    
+  }
+  

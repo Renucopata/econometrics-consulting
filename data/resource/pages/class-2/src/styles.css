@@ -1,21 +1,13 @@
-/*body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    font-family: "Cairo", sans-serif;
-  }*/
+
+  
   
   .accordion {
     justify-content: center;
-    position: relative;
+    position: absolute;
     align-items: center;
-    margin: 20px ;
-    width: 97%;
-    /*left: 35%;*/
-    top: -100px;
+    margin: 10px ;
+    width: 60%;
+    left: 35%;
   }
   
   .accordion-item {
@@ -23,19 +15,13 @@
   }
   
   .accordion-header {
-    background-color: rgba(223, 127, 59, 0.911);
-    padding: 30px;
+    background-color: rgb(223, 127, 59);
+    padding: 15px;
     cursor: pointer;
     font-weight: bold;
     color: black;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    font-size: 25px;
-  }
-
-  .accordion-header img{
-    position: absolute;
-    height: 50px;
   }
   
   .accordion-content {
@@ -44,12 +30,11 @@
     transition: max-height 1s ease;
     padding: 10px;
     overflow: hidden;
-    background-color: whitesmoke;
+    background-color: #dddada;
     color: rgb(0, 0, 0);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     font-weight: 500;
-    font-size: 20px;
   }
   
   .accordion-content.active {
@@ -75,19 +60,6 @@
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 
-  }
-
-  .click-aqui a{
-    background-color: rgba(223, 127, 59, 0.911);
-    padding: 10px;
-    border-radius: 10px;
-    
-
-  }
-
-  .click-aqui{
-    position: relative;
-    left: -250px;
   }
 
   .card-btn {
@@ -132,7 +104,7 @@ grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
-    margin: 0 250px;
+    margin: 0 25px;
     
       }
 
@@ -150,42 +122,13 @@ grid-template-columns: repeat(2, 1fr);
         border: 1px solid rgb(112, 112, 112);
         grid-column: 1;
         }
-
-        .accordion-header {
-          
-          font-size: 18px;
-        }
-
         .accordion {
-          
-          width: 90%;
-
+          justify-content: center;
+          position: relative;
+          align-items: center;
+          margin: 10px ;
+          width: 98%;
+          left: 0;
+          grid-column:1 ;
         }
-        .accordion-header img{
-          height: 30px;
-        }
-}
-
-@media screen and (max-width: 768px){
-  .consultas {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    margin: 0 25px;
-    
-      }
-      .click-aqui{
-        position: relative;
-        left: 0px;
-      }
-      .accordion {
-        justify-content: center;
-        position: relative;
-        align-items: center;
-        margin: 20px ;
-        width: 90%;
-        /*left: 35%;*/
-        top: 0px;
-      }
 }

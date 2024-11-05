@@ -12,7 +12,7 @@
 .picture3 {
   width: 100%;
   height: auto; /* Automatically adjusts height based on the width */
-  max-height: 550px; /* Limits the height to 700px */
+  max-height: 65vh; /* Limits the height to 700px */
 }
 
 section h2 {

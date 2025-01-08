@@ -25,13 +25,13 @@ footer {
   .box_footer {
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    margin-right: 20px;
 
   }
   
   
 .logo_footer img {
-  width: 150px;
+  width: 110px;
   height: 80%;
 
 }
@@ -46,7 +46,7 @@ footer {
   .box_footer a{
     margin-bottom: 10px;
     color: rgb(0, 0, 0);
-    font-size: 600;
+    font-size: 400;
     
   }
   
@@ -63,7 +63,24 @@ footer {
     color: rgb(10, 102, 194);
   }
   
-
+  @media (max-width: 1200px) {
+    .container_footer {
+      flex-direction: column; /* Change layout to vertical */
+      align-items: center; /* Center content */
+      margin-left: 0; /* Remove left margin for better centering */
+    }
+  
+    .box_footer {
+      margin-bottom: 20px; /* Add space between boxes vertically */
+      margin-right: 0; /* Remove right margin to center align */
+      width: 100%; /* Ensure full width for each box */
+      text-align: center; /* Optional: Center-align text content */
+    }
+  
+    .logo_footer img {
+      width: 100px; /* Optionally reduce the logo size for smaller screens */
+    }
+  }
 
   @media screen and (max-width: 678px) {
     .container_footer {

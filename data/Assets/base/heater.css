@@ -36,7 +36,8 @@ header .logo {
 .logo img{  
   cursor: pointer;
   height: 50%;
-  max-width: 150px;
+  max-width: 70px;
+  object-fit: contain;
 }
 
 .container_nav {

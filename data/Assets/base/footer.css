@@ -29,14 +29,12 @@ footer {
 
   }
   
-  .box_footer .logo img {
-    width: 270px;
-    height: 80%;
-    margin-left: 0;
-
-  }
   
+.logo_footer img {
+  width: 150px;
+  height: 80%;
 
+}
   
   .box_footer h2 {
     margin-bottom: 30px;
